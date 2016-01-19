@@ -3,11 +3,10 @@
     package="com.carrey.sample">
 
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppBaseTheme">
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
