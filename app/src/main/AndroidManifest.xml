@@ -3,6 +3,7 @@
     package="com.carrey.sample">
 
     <application
+        android:name=".BaseApp"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -17,6 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".view.photo.PhotoCategoryActivity"/>
+        <activity android:name=".view.photo.multiimageselector.MultiImageSelectorActivity"/>
     </application>
 
 </manifest>

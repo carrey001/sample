@@ -1,4 +1,4 @@
-package com.carrey.sample;
+package com.carrey.sample.view.photo;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,13 +10,22 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.carrey.sample.R;
 import com.carrey.sample.bean.HomeItem;
-import com.carrey.sample.view.photo.PhotoCategoryActivity;
+import com.carrey.sample.view.photo.multiimageselector.MultiImageSelectorActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+/**
+ * 类描述：
+ * 创建人：carrey
+ * 创建时间：2016/1/20 14:07
+ */
+
+public class PhotoCategoryActivity extends AppCompatActivity {
+
+
     private ListView listView;
     private List<HomeItem> data = new ArrayList<>();
 
@@ -31,13 +40,16 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                startActivity(new Intent(MainActivity.this, data.get(position).clazz));
+                startActivity(new Intent(PhotoCategoryActivity.this, data.get(position).clazz));
             }
         });
     }
 
     private void initListData() {
-        data.add(new HomeItem("图库相册", PhotoCategoryActivity.class));
+        data.add(new HomeItem("MultiImageSelectorActivity", MultiImageSelectorActivity.class));
+//        data.add(new HomeItem("300美女图片客户端源码", PhotoCategoryActivity.class));
+//        data.add(new HomeItem("仿微信朋友圈图片浏览器", PhotoCategoryActivity.class));
+//        data.add(new HomeItem("安卓动漫图片阅读器项目", PhotoCategoryActivity.class));
 //        data.add(new HomeItem("引导页", GuideListAct.class));
 //        data.add(new HomeItem("二维码", CaptureActivity.class));
 //        data.add(new HomeItem("尺子", RulerAct.class));
@@ -74,4 +86,5 @@ public class MainActivity extends AppCompatActivity {
             return convertView;
         }
     }
+
 }
