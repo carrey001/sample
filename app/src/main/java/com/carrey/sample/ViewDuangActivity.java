@@ -11,12 +11,20 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.carrey.sample.bean.HomeItem;
-import com.carrey.sample.view.photo.PhotoCategoryActivity;
+import com.carrey.sample.view.duang.ViewBoomActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+/**
+ * 类描述：
+ * 创建人：carrey
+ * 创建时间：2016/1/21 14:54
+ */
+
+public class ViewDuangActivity extends AppCompatActivity {
+
+
     private ListView listView;
     private List<HomeItem> data = new ArrayList<>();
 
@@ -31,14 +39,17 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                startActivity(new Intent(MainActivity.this, data.get(position).clazz));
+                startActivity(new Intent(ViewDuangActivity.this, data.get(position).clazz));
             }
         });
     }
 
     private void initListData() {
-        data.add(new HomeItem("图库相册", PhotoCategoryActivity.class));
-        data.add(new HomeItem("控件特效", ViewDuangActivity.class));
+        data.add(new HomeItem("爆炸", ViewBoomActivity.class));
+//        data.add(new HomeItem("300美女图片客户端源码", PhotoCategoryActivity.class));
+//        data.add(new HomeItem("仿微信朋友圈图片浏览器", PhotoCategoryActivity.class));
+//        data.add(new HomeItem("安卓动漫图片阅读器项目", PhotoCategoryActivity.class));
+//        data.add(new HomeItem("引导页", GuideListAct.class));
 //        data.add(new HomeItem("二维码", CaptureActivity.class));
 //        data.add(new HomeItem("尺子", RulerAct.class));
 //        data.add(new HomeItem("http", HttpTestActivity.class));
@@ -74,4 +85,5 @@ public class MainActivity extends AppCompatActivity {
             return convertView;
         }
     }
+
 }
