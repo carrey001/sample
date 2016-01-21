@@ -20,6 +20,8 @@
         </activity>
         <activity android:name=".view.photo.PhotoCategoryActivity"/>
         <activity android:name=".view.photo.multiimageselector.MultiImageSelectorActivity"/>
+
+        <activity android:name=".view.photo.TestCommonPhoto"/>
     </application>
 
 </manifest>

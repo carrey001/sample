@@ -47,6 +47,7 @@ public class PhotoCategoryActivity extends AppCompatActivity {
 
     private void initListData() {
         data.add(new HomeItem("MultiImageSelectorActivity", MultiImageSelectorActivity.class));
+        data.add(new HomeItem("300美女图片客户端源码", TestCommonPhoto.class));
 //        data.add(new HomeItem("300美女图片客户端源码", PhotoCategoryActivity.class));
 //        data.add(new HomeItem("仿微信朋友圈图片浏览器", PhotoCategoryActivity.class));
 //        data.add(new HomeItem("安卓动漫图片阅读器项目", PhotoCategoryActivity.class));
